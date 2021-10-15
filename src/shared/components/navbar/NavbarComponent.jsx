@@ -6,6 +6,13 @@ function NavbarComponent(props) {
 
     let title = props.title;
 
+    const onSuccess = (res) =>{
+        console.log(res)
+    }
+    const onFail = (res) =>{
+        console.log(res)
+    }
+
     return (
         <nav className="navbar navbar-expand-lg navbar-light mb-3" style={{backgroundColor: "#EFC3A4"}}>
             <div className="container-fluid">
@@ -22,6 +29,9 @@ function NavbarComponent(props) {
                         <Link to="/usuarios" className="nav-link">Usuarios</Link>
                     </div>
                 </div>
+                <a className="btn btn-primary" href={"http://localhost:5000/api/users/google"}>
+                    Iniciar sesión con google
+                </a>
             </div>
         </nav>
     )
